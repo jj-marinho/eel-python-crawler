@@ -53,7 +53,6 @@ def crawler(soup):
 def css_style_crawler(soup):
 
 	## Initializing Function
-	table = []
 	i = 0
 
 	### Finds the Style Tag and fixes all the unwanted characters, then makes a list with the css tags

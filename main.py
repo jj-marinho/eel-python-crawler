@@ -43,17 +43,17 @@ def crawler_ligamagic(card_name, url):
 
 
 conn = sqlite.create_connection('valores.db')
-# if conn is not None:
-# 		sqlite.create_table(conn)
-# else:
-# 		print("Error! cannot create the database connection.")
+if conn is not None:
+		sqlite.create_table(conn)
+else:
+		print("Error! cannot create the database connection.")
 
-# listofcards = ['Gilded Goose', 'Brazen Borrower', 'Liliana, the Last Hope']
+listofcards = ['Gilded Goose', 'Brazen Borrower', 'Liliana, the Last Hope']
 
-# for card in listofcards:
-# 	liga_url, scg = crawlerv2.cardToLink(card)
-# 	table = crawler_ligamagic(card, liga_url)
-# 	sqlite.insert_values(conn, table)
+for card in listofcards:
+	liga_url, scg = crawlerv2.cardToLink(card)
+	table = crawler_ligamagic(card, liga_url)
+	sqlite.insert_values(conn, table)
 
 sqlite.show_data(conn)
 
