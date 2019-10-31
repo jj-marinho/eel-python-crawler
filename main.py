@@ -1,5 +1,6 @@
 import imaginador
 import crawlerv2
+import sqlite
 
 import requests
 import pytesseract
@@ -10,14 +11,16 @@ import time
 
 
 
-def main():
+def crawler_ligamagic(card_list):
 
-	card_name =  "Ganso" #input("Digite o nome da Carta: ")
+
+
+
+
+	card_name = input("Digite o nome da Carta: ")
 	url = input("Digite a URL da carta: ")
 	page = urllib.request.urlopen(url)
 	soup = BeautifulSoup(page.read(), 'html.parser')
-
-
 	html_extract = crawlerv2.crawler(soup)
 	css_extract =  crawlerv2.css_style_crawler(soup)
 	crawlerv2.css_html_match(html_extract, css_extract)
@@ -36,18 +39,25 @@ def main():
 			valor_com_ponto = imaginador.recognize(resultadoImagem, virgula)
 		row['crypto_values'] = valor_com_ponto
 		row['card_name'] = card_name
-		print(row)
 
-	
-	for i in html_extract:
-		print(i)
 
+	# for i in html_extract:
+	# 	print(i.values())
 	return html_extract
 
 
 
 
-main()
+# table = main()
+
+# conn = sqlite.create_connection('valores.db')
+# if conn is not None:
+# 		sqlite.create_table(conn)
+# else:
+# 		print("Error! cannot create the database connection.")
+# sqlite.insert_values(conn, table)
+# sqlite.show_data(conn)
+# delete_table(conn)
 
 
 

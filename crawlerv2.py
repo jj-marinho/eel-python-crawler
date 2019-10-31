@@ -127,7 +127,11 @@ def css_html_match(table, css_class_coordinates):
 		row['crypto_values'] = decyphered_values # Retorna a nova linha.
 		
 
+def link_returner(listOfCards):
+	const_link = "https://www.ligamagic.com.br/?view=cards%2Fsearch&card="
 
+	for i in listOfCards:
+		i.split(" ", "+")
 
 
 
@@ -136,10 +140,10 @@ def css_html_match(table, css_class_coordinates):
 
 
 # html = crawler("indexv3.html")
-# # css = css_style_crawler("indexv2.html")
-# # css_html_match(html, css)
+# css = css_style_crawler("indexv2.html")
+# css_html_match(html, css)
 
-# print(html[0])
+# print(html[0].values)
 
 # print("--- %s seconds ---" % (time.time() - start_time))
 
