@@ -66,11 +66,11 @@ def delete_table(conn):
 
 
 
-# conn = create_connection('valores.db')
+conn = create_connection('valores.db')
 # if conn is not None:
 # 		create_table(conn)
 # else:
 # 		print("Error! cannot create the database connection.")
 # insert_values(conn, 0)
 # show_data(conn)
-# # delete_table(conn)
+delete_table(conn)
