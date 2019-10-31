@@ -127,12 +127,19 @@ def css_html_match(table, css_class_coordinates):
 		row['crypto_values'] = decyphered_values # Retorna a nova linha.
 		
 
-def link_returner(listOfCards):
-	const_link = "https://www.ligamagic.com.br/?view=cards%2Fsearch&card="
+def cardToLink(card):
 
-	for i in listOfCards:
-		i.split(" ", "+")
+	const_link = {
+	'ligamagic':	"https://www.ligamagic.com.br/?view=cards%2Fsearch&card=",
+	'starcity': "http://www.starcitygames.com/results?name="
+	}
+	card_url_liga = const_link['ligamagic'] + card.replace(" ", "+").replace(',', '%2C')
+	card_url_scg  = const_link['starcity'] + card.replace(" ", "+").replace(',', '%2C')
+	return card_url_liga, card_url_scg
+		
 
+
+listofcards = ['Gilded Goose', 'Brazen Borrower', 'Liliana, the Last Hope']
 
 
 

@@ -47,7 +47,7 @@ def imgDiscover(imgopen, listofpositions):
 
 def recognize(img, comma_position):
 	recognized_value = pytesseract.image_to_string(img)
-	value_with_dot = (recognized_value[0:comma_position]) + '.' + recognized_value[comma_position:]
+	value_with_dot = ((recognized_value[0:comma_position]) + '.' + (recognized_value[comma_position:])).replace(" ", "")
 	return float(value_with_dot)
 
 	

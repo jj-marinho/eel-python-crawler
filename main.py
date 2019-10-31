@@ -11,14 +11,8 @@ import time
 
 
 
-def crawler_ligamagic(card_list):
+def crawler_ligamagic(card_name, url):
 
-
-
-
-
-	card_name = input("Digite o nome da Carta: ")
-	url = input("Digite a URL da carta: ")
 	page = urllib.request.urlopen(url)
 	soup = BeautifulSoup(page.read(), 'html.parser')
 	html_extract = crawlerv2.crawler(soup)
@@ -48,16 +42,22 @@ def crawler_ligamagic(card_list):
 
 
 
-# table = main()
-
-# conn = sqlite.create_connection('valores.db')
+conn = sqlite.create_connection('valores.db')
 # if conn is not None:
 # 		sqlite.create_table(conn)
 # else:
 # 		print("Error! cannot create the database connection.")
-# sqlite.insert_values(conn, table)
-# sqlite.show_data(conn)
-# delete_table(conn)
+
+# listofcards = ['Gilded Goose', 'Brazen Borrower', 'Liliana, the Last Hope']
+
+# for card in listofcards:
+# 	liga_url, scg = crawlerv2.cardToLink(card)
+# 	table = crawler_ligamagic(card, liga_url)
+# 	sqlite.insert_values(conn, table)
+
+sqlite.show_data(conn)
+
+
 
 
 

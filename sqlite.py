@@ -36,12 +36,11 @@ CREATE TABLE IF NOT EXISTS valores_liga (
 
 #Insert values into table
 def insert_values(conn, table):
-
 	cur = conn.cursor()
-	query = """
-			INSERT INTO valores_liga (card_name, store_name, edition, card_quality, price)
-			VALUES (?, ?, ?, ?, ?)
-					"""
+	del_query = """ DELETE FROM valores_liga where card_name = ?"""
+	query 		= """ INSERT INTO valores_liga (card_name, store_name, edition, card_quality, price)
+									VALUES (?, ?, ?, ?, ?)	"""
+	cur.execute(del_query, (table[0]['card_name'],))
 	for row in table:
 		row =  [row['card_name'], row['store_name'], row['edition'], row['card_quality'],  row['crypto_values']]
 		cur.execute(query, row)
@@ -60,8 +59,7 @@ def show_data(conn):
 def delete_table(conn):
 	cur = conn.cursor()
 	query = """DROP TABLE valores_liga"""
-	cur.execute(query)
-	
+	cur.execute(query)	
 
 
 
@@ -73,4 +71,6 @@ conn = create_connection('valores.db')
 # 		print("Error! cannot create the database connection.")
 # insert_values(conn, 0)
 # show_data(conn)
-delete_table(conn)
+# delete_table(conn)
+
+
