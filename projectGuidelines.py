@@ -18,10 +18,13 @@ DADOS IDENTIFICADOS:
 #	3) IDENTIFICAR MANEIRA PARA PROCESSAR OS DADOS ENCRIPTADOS (PROVAVELMENTE ENVOLVE PYTESSERACT) ######################################## CHECK
  ## -- PEGAR ELEMENTOS CSS PARA O CRAWLING                                                       ######################################## CHECK
  ## -- DE=>PARA  CLASS CSS => POSIÇÃO                                                            ######################################## CHECK
- ## -- CRIAR METODO QUE FAZ A PROCURA NO SITE DA LIGAMAGIC PARA MAIS DE UMA CARTA                ??????????????
+ ## -- CRIAR METODO QUE FAZ A PROCURA NO SITE DA LIGAMAGIC PARA MAIS DE UMA CARTA                ######################################## CHECK
+ ## -- DEFINIR MANEIRA DE COMPARAR COM OS PREÇOS DA STARCITYGAMES                                ######################################## CHECK
+ ## -- IMPLEMENTAR CÓDIGO SCG/CARDKINGDOM (NECESSÁRIO MAIS DOIS CRAWLERS)                       
 
-#4)	TRANSFERIR ESTAS LISTAS/DICIONARIOS PARA O SQL/SQLITE/ETC                                    <========  FOCO ATUAL                                
+#4)	TRANSFERIR ESTAS LISTAS/DICIONARIOS PARA O SQL/SQLITE/ETC                                    ######################################## CHECK                                
 
 #5) REALIZAR O LEVANTE DE DADOS ATRAVÉS DO EEL (GUI CSS/HTML/JS)
+ ## -- DEFINIR TECNOLOGIAS A SEREM UTILIZADAS
+ ## --                                   
 
-#6)	DEFINIR MANEIRA DE COMPARAR COM OS PREÇOS DA STARCITYGAMES

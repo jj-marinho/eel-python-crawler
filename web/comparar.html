@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hohoho</title>
+    <link
+      href="./cssBootstrap/bootstrap.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      #wrap {
+        min-height: 100%;
+      }
+
+      #main {
+        overflow: auto;
+        padding-bottom: 10px; /* this needs to be bigger than footer height*/
+      }
+
+      .footer {
+        position: relative;
+        margin-top: -150px; /* negative value of footer height */
+        height: 150px;
+        clear: both;
+        padding-top: 20px;
+      }
+    </style>
+    <script type="text/javascript" src="/eel.js"></script>
+  </head>
+  <body class="body-minheight">
+    <div id="wrap">
+      <div id="main" class="clear-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container">
+            <img
+              class="navbar-brand"
+              src="/web/imgs/python.png"
+              alt="python logo"
+              style="width:auto; height:50px;"
+            />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarColor01"
+              aria-controls="navbarColor01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"
+                    >Inicio<span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="comparar.html">Comparar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Adicionar e Deletar</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      <div class="container">
+        <div class="form-group">
+          <label class="col-form-label col-form-label-lg" for="inputLarge"
+            >Nome da Carta</label
+          >
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            placeholder="Infernal Spawn of Infernal Spawn of Evil"
+            id="inputLarge"
+          />
+        </div>
+        <div class="row">
+          <div class="container col align-self-start">
+            <div class="form-group">
+              <div class="row">
+                <p class="ml-3">Ordenar Por:</p>
+                <div class="custom-control custom-radio mx-2">
+                  <input
+                    type="radio"
+                    id="customRadio1"
+                    name="customRadio"
+                    class="custom-control-input"
+                    checked=""
+                  />
+                  <label class="custom-control-label" for="customRadio1"
+                    >Preço</label
+                  >
+                </div>
+                <div class="custom-control custom-radio mr-2">
+                  <input
+                    type="radio"
+                    id="customRadio2"
+                    name="customRadio"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio2"
+                    >Nome</label
+                  >
+                </div>
+                <div class="custom-control custom-radio mr-2">
+                  <input
+                    type="radio"
+                    id="customRadio3"
+                    name="customRadio"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio3"
+                    >Variação USA-BR</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row col-md-6 float-right">
+            <div class="mx-auto">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  name="colectionInput"
+                  list="colection"
+                />
+                <datalist id="colection">
+                  <option value="Opçao 1"></option>
+                  <option value="Opçao 2"></option>
+                </datalist>
+              </div>
+            </div>
+            <div class="mx-auto">
+              <select class="custom-select">
+                <option selected="1">Standard</option>
+                <option value="2">Modern</option>
+                <option value="3">Pauper</option>
+                <option value="4">Pioneer</option>
+                <option value="5">Legacy</option>
+                <option value="6">Vintage</option>
+                <option value="7">EDH/Commander</option>
+              </select>
+            </div>
+            <div class="mx-auto">
+              <select class="custom-select">
+                <option selected="1">10</option>
+                <option value="2">20</option>
+                <option value="3">50</option>
+                <option value="4">100</option>
+                <option value="5">Todas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+			</div>
+			<div class="container">
+				<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Nome da Carta</th>
+								<th scope="col">Coleção</th>
+								<th scope="col">Qualidade</th>
+								<th scope="col">Nome da Loja</th>
+								<th scope="col">Menor Preço LigaMagic</th>
+								<th scope="col">Nome da Loja Internacional</th>
+								<th scope="col">Menor Preço Internacional</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+				</table>
+			</div>
+		</div>
+    </div>
+    <div class="container">
+      <footer class="page-footer footer text-center">
+        <div>
+          <div class="text-center py-3">
+            <h4>Criado por realestDuck. Todos os Direitos Reservados</h4>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./jsBootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="./jsBootstrap/popper.min.js"></script>
+    <script src="./jsBootstrap/bootstrap.min.js"></script>
+  </body>
+</html>
